@@ -1,0 +1,6 @@
+services:
+  ngnix:
+    build: src/requirements/nginx
+    container_name: custom_ngnix
+    ports:
+      - "80:80"
