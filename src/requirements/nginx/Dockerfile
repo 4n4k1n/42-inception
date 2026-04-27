@@ -1,8 +1,8 @@
-FROM alpine:latest
+FROM alpine:3
 
 RUN apk update && apk upgrade && apk add --no-cache nginx
 
-COPY default.conf /etc/nginx/http.d/default.conf
+COPY default.conf /etc/nginx/http.d/.
 
 RUN mkdir -p /usr/share/nginx/html
 COPY index.html /usr/share/nginx/html/
