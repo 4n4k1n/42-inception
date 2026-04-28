@@ -1,7 +1,7 @@
 services:
   nginx:
-    build: src/requirements/nginx
     container_name: nginx
+    build: src/requirements/nginx
     ports:
       - "80:80"
     depends_on:
@@ -9,7 +9,10 @@ services:
     volumes:
       - ./src/web:/var/www/html
   wordpress:
-    build: src/requirements/wordpress
     container_name: wordpress
+    build: src/requirements/wordpress
     volumes:
       - ./src/web:/var/www/html
+  mariadb:
+    container_name: mariadb
+    build: src/requirements/mariadb
