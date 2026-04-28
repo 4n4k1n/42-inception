@@ -8,4 +8,4 @@ services:
       - wordpress
   wordpress:
     build: src/requirements/wordpress
-    container_name: wp-php
+    container_name: wordpress
