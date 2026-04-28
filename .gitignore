@@ -1,2 +1,5 @@
 *.pdf
 src/.env
+
+src/web/
+!src/web/index.html
