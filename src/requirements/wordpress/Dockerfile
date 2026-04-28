@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk update && apk upgrade && apk add --no-cache php84-fpm
+RUN apk update && apk upgrade && apk add --no-cache php84-fpm php84-mysqli curl 
 
 COPY www.conf /etc/php84/php-fpm.d/.
 
