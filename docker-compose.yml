@@ -6,6 +6,10 @@ services:
       - "80:80"
     depends_on:
       - wordpress
+    volumes:
+      - ./src/web:/var/www/html
   wordpress:
     build: src/requirements/wordpress
     container_name: wordpress
+    volumes:
+      - ./src/web:/var/www/html
