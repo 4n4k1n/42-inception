@@ -9,13 +9,23 @@ services:
     volumes:
       - ./src/web:/var/www/html
     restart: always
+    networks:
+      - inception
   wordpress:
     container_name: wordpress
     build: src/requirements/wordpress
     volumes:
       - ./src/web:/var/www/html
     restart: always
+    networks:
+      - inception
   mariadb:
     container_name: mariadb
     build: src/requirements/mariadb
     restart: always
+    networks:
+      - inception
+
+networks:
+  inception:
+    driver: bridge
