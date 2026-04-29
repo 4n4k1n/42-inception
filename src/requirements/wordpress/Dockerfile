@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.20
 
 RUN apk update && apk upgrade && apk add --no-cache php84 php84-fpm php84-mysqli curl php-phar
 
