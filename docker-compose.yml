@@ -8,11 +8,14 @@ services:
       - wordpress
     volumes:
       - ./src/web:/var/www/html
+    restart: always
   wordpress:
     container_name: wordpress
     build: src/requirements/wordpress
     volumes:
       - ./src/web:/var/www/html
+    restart: always
   mariadb:
     container_name: mariadb
     build: src/requirements/mariadb
+    restart: always
