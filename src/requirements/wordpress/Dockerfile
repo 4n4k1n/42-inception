@@ -1,6 +1,6 @@
-FROM alpine:3.20
+FROM alpine:3
 
-RUN apk update && apk upgrade && apk add --no-cache php84 php84-fpm php84-mysqli curl php-phar
+RUN apk update && apk upgrade && apk add --no-cache php84 php84-fpm php84-mysqli php84-phar curl
 
 COPY www.conf /etc/php84/php-fpm.d/.
 COPY script.sh .
