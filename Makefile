@@ -2,6 +2,7 @@ DATA_DIR = /home/anakin/data
 
 all:
 	mkdir -p $(DATA_DIR)/wordpress $(DATA_DIR)/mariadb
+	grep -qF 'anakin.42.fr' /etc/hosts || echo '127.0.0.1	anakin.42.fr' | sudo tee -a /etc/hosts
 	docker compose up --build -d
 
 down:
