@@ -1,5 +1,5 @@
 *.pdf
-src/.env
+srcs/.env
 
-src/web/
-!src/web/index.html
+srcs/web/
+!srcs/web/index.html
