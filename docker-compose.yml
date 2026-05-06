@@ -38,13 +38,13 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/anakin/data/wordpress
+      device: /home/${USER}/data/wordpress
   db-data:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/anakin/data/mariadb
+      device: /home/${USER}/data/mariadb
 
 networks:
   inception:
