@@ -1,7 +1,7 @@
 services:
   nginx:
     container_name: nginx
-    build: srcs/requirements/nginx
+    build: requirements/nginx
     ports:
       - "443:443"
     depends_on:
@@ -14,8 +14,8 @@ services:
 
   wordpress:
     container_name: wordpress
-    build: srcs/requirements/wordpress
-    env_file: srcs/.env
+    build: requirements/wordpress
+    env_file: .env
     volumes:
       - wp-files:/var/www/html
     restart: always
@@ -24,8 +24,8 @@ services:
 
   mariadb:
     container_name: mariadb
-    build: srcs/requirements/mariadb
-    env_file: srcs/.env
+    build: requirements/mariadb
+    env_file: .env
     volumes:
       - db-data:/var/lib/mysql
     restart: always
