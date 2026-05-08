@@ -1,4 +1,4 @@
-FROM alpine:3.23
+FROM alpine:3.22.4
 
 RUN apk update && apk upgrade && apk add --no-cache php84 php84-fpm php84-mysqli php84-phar php84-iconv php84-mbstring curl mariadb-client
 
