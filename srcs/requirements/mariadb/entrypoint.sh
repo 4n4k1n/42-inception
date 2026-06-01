@@ -20,4 +20,4 @@ EOSQL
     wait $PID
 fi
 
-exec mysqld_safe
+exec mysqld_safe --user=root
